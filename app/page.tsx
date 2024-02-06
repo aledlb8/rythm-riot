@@ -98,55 +98,55 @@ export default function Home() {
                   <Tooltip delayDuration={0}>
                     <Label className="block text-sm font-medium">Melody Type: {" "}
                       <TooltipTrigger asChild>
-                        <span className="text-blue-600">{challenge.melodyType}</span>
+                        <span className="text-blue-600">{!start ? "Hidden until start" : challenge.melodyType}</span>
                       </TooltipTrigger>
                     </Label>
                     <TooltipContent>
-                      <p>{melodyDescriptions[challenge.melodyType] || "No information has been found."}</p>
+                      <p>{!start ? "Hidden until start" : melodyDescriptions[challenge.melodyType] || "No information has been found."}</p>
                     </TooltipContent>
                   </Tooltip>
 
                   <Tooltip delayDuration={0}>
                     <Label className="block text-sm font-medium">Drum Type: {" "}
                       <TooltipTrigger asChild>
-                        <span className="text-blue-600">{challenge.drumType}</span>
+                        <span className="text-blue-600">{!start ? "Hidden until start" : challenge.drumType}</span>
                       </TooltipTrigger>
                     </Label>
                     <TooltipContent>
-                      <p>{drumDescriptions[challenge.drumType] || "No information has been found."}</p>
+                      <p>{!start ? "Hidden until start" : drumDescriptions[challenge.drumType] || "No information has been found."}</p>
                     </TooltipContent>
                   </Tooltip>
 
                   <Tooltip delayDuration={0}>
                     <Label className="block text-sm font-medium">Genre: {" "}
                       <TooltipTrigger asChild>
-                        <span className="text-blue-600">{challenge.genre || "No information has been found."}</span>
+                        <span className="text-blue-600">{!start ? "Hidden until start" : challenge.genre || "No information has been found."}</span>
                       </TooltipTrigger>
                     </Label>
                     <TooltipContent>
-                      <p>{genreDescriptions[challenge.genre] || "No information has been found."}</p>
+                      <p>{!start ? "Hidden until start" : genreDescriptions[challenge.genre] || "No information has been found."}</p>
                     </TooltipContent>
                   </Tooltip>
 
                   <Tooltip delayDuration={0}>
                     <Label className="block text-sm font-medium">Tempo: {" "}
                       <TooltipTrigger asChild>
-                        <span className="text-blue-600">{challenge.tempo} BPM</span>
+                        <span className="text-blue-600">{!start ? "Hidden until start" : challenge.tempo + " BPM"}</span>
                       </TooltipTrigger>
                     </Label>
                     <TooltipContent>
-                      <p>{getTempoDescription(challenge.tempo) || "No information has been found."}</p>
+                      <p>{!start ? "Hidden until start" : getTempoDescription(challenge.tempo) || "No information has been found."}</p>
                     </TooltipContent>
                   </Tooltip>
 
                   <Tooltip delayDuration={0}>
                     <Label className="block text-sm font-medium">Key: {" "}
                       <TooltipTrigger asChild>
-                        <span className="text-blue-600">{challenge.key || "No information has been found."}</span>
+                        <span className="text-blue-600">{!start ? "Hidden until start" : challenge.key || "No information has been found."}</span>
                       </TooltipTrigger>
                     </Label>
                     <TooltipContent>
-                      <p>{keyDescriptions[challenge.key]}</p>
+                      <p>{!start ? "Hidden until start" : keyDescriptions[challenge.key]}</p>
                     </TooltipContent>
                   </Tooltip>
                 </div>
